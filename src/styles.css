@@ -1,0 +1,121 @@
+/* Sistema de Cores Google Material Design */
+:root {
+  /* Cores Primárias Google */
+  --google-blue: #4285f4;
+  --google-red: #ea4335;
+  --google-yellow: #fbbc04;
+  --google-green: #34a853;
+  
+  /* Tons de Azul */
+  --blue-50: #e3f2fd;
+  --blue-100: #bbdefb;
+  --blue-500: #2196f3;
+  --blue-600: #1e88e5;
+  --blue-700: #1976d2;
+  
+  /* Tons de Cinza */
+  --gray-50: #fafafa;
+  --gray-100: #f5f5f5;
+  --gray-200: #eeeeee;
+  --gray-300: #e0e0e0;
+  --gray-500: #9e9e9e;
+  --gray-700: #616161;
+  --gray-800: #424242;
+  --gray-900: #212121;
+  
+  /* Sombras */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  --shadow-md: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  --shadow-lg: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+/* Reset e configurações globais */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--gray-50);
+  color: var(--gray-800);
+  line-height: 1.6;
+}
+
+/* Classes utilitárias Google */
+.google-blue { color: var(--google-blue) !important; }
+.google-red { color: var(--google-red) !important; }
+.google-green { color: var(--google-green) !important; }
+.google-yellow { color: var(--google-yellow) !important; }
+
+.bg-google-blue { background-color: var(--google-blue) !important; }
+.bg-google-red { background-color: var(--google-red) !important; }
+.bg-google-green { background-color: var(--google-green) !important; }
+.bg-google-yellow { background-color: var(--google-yellow) !important; }
+
+/* Customização Bootstrap com cores Google */
+.btn-google-blue {
+  background-color: var(--google-blue);
+  border-color: var(--google-blue);
+  color: white;
+}
+
+.btn-google-blue:hover {
+  background-color: var(--blue-700);
+  border-color: var(--blue-700);
+}
+
+.btn-google-red {
+  background-color: var(--google-red);
+  border-color: var(--google-red);
+  color: white;
+}
+
+.btn-google-red:hover {
+  background-color: #d33b2c;
+  border-color: #d33b2c;
+}
+
+.btn-google-green {
+  background-color: var(--google-green);
+  border-color: var(--google-green);
+  color: white;
+}
+
+.btn-google-green:hover {
+  background-color: #2e7d32;
+  border-color: #2e7d32;
+}
+
+/* Cards estilo Google */
+.card-google {
+  border: none;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.3s ease;
+}
+
+.card-google:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* Navbar estilo Google */
+.navbar-google {
+  background-color: white;
+  box-shadow: var(--shadow-sm);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+/* Formulários estilo Google */
+.form-control-google {
+  border: 1px solid var(--gray-300);
+  border-radius: 4px;
+  padding: 12px 16px;
+  font-size: 14px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control-google:focus {
+  border-color: var(--google-blue);
+  box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2);
+  outline: none;
+}

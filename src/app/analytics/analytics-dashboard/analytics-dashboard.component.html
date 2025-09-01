@@ -1,0 +1,90 @@
+<div class="analytics-container">
+  <div class="header-section">
+    <div class="header-content">
+      <div class="title-section">
+        <h1 class="main-title"><i class="icon-analytics">📊</i> Dashboard de Análises</h1>
+        <p class="subtitle">Visão geral das tendências de agendamento e horários de pico.</p>
+      </div>
+      <div class="action-buttons">
+        <a routerLink="/dashboard" class="btn btn-secondary"><i class="icon-back">↩️</i> Voltar ao Dashboard</a>
+        <button class="btn btn-danger" (click)="logout()"><i class="icon-logout">🚪</i> Sair</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="kpis-section">
+    <div class="kpi-card">
+      <div class="kpi-icon">📅</div>
+      <div class="kpi-content">
+        <h4>Total de Agendamentos</h4>
+        <p class="kpi-value">{{ totalAppointments }}</p>
+      </div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-icon">📊</div>
+      <div class="kpi-content">
+        <h4>Média Diária</h4>
+        <p class="kpi-value">{{ averageAppointmentsPerDay | number:'1.2-2' }}</p>
+      </div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-icon">⏰</div>
+      <div class="kpi-content">
+        <h4>Horário de Pico</h4>
+        <p class="kpi-value">{{ peakHour }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="charts-grid">
+    <div class="chart-section">
+      <div class="chart-header">
+        <h3 class="chart-title"><i class="icon-calendar">📅</i> Agendamentos por Dia da Semana</h3>
+        <p class="chart-description">Visualização da frequência de agendamentos por dia da semana.</p>
+      </div>
+      <div class="chart-wrapper">
+        <canvas id="appointmentsByDayOfWeekChart"></canvas>
+      </div>
+    </div>
+
+    <div class="chart-section">
+      <div class="chart-header">
+        <h3 class="chart-title"><i class="icon-trending">📈</i> Frequência de Agendamentos por Horário</h3>
+        <p class="chart-description">Distribuição dos agendamentos ao longo do dia.</p>
+      </div>
+      <div class="chart-wrapper">
+        <canvas id="appointmentsByTimeOfDayChart"></canvas>
+      </div>
+    </div>
+
+    <div class="chart-section">
+      <div class="chart-header">
+        <h3 class="chart-title"><i class="icon-pie-chart">🥧</i> Distribuição de Tipos de Serviço</h3>
+        <p class="chart-description">Proporção de diferentes tipos de serviços.</p>
+      </div>
+      <div class="chart-wrapper">
+        <canvas id="serviceTypeDistributionChart"></canvas>
+      </div>
+    </div>
+
+    <div class="chart-section">
+      <div class="chart-header">
+        <h3 class="chart-title"><i class="icon-trend-up">📈</i> Tendência Mensal de Agendamentos</h3>
+        <p class="chart-description">Evolução dos agendamentos ao longo dos meses.</p>
+      </div>
+      <div class="chart-wrapper">
+        <canvas id="monthlyAppointmentTrendChart"></canvas>
+      </div>
+    </div>
+
+    <div class="chart-section">
+      <div class="chart-header">
+        <h3 class="chart-title"><i class="icon-radar">🎯</i> Comparativo de Desempenho</h3>
+        <p class="chart-description">Análise de desempenho entre diferentes categorias.</p>
+      </div>
+      <div class="chart-wrapper">
+        <canvas id="performanceRadarChart"></canvas>
+      </div>
+    </div>
+  </div>
+</div>

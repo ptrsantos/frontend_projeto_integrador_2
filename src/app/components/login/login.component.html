@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+      <div class="card card-google mt-5">
+        <div class="card-body p-5 text-center">
+          <img src="assets/logo_clinica.png" alt="Clínica Mentalize" class="img-fluid mb-4" style="max-width: 200px;">
+          
+          <h1 class="h3 mb-3 google-blue fw-bold">Bem-vindo à Clínica Mentalize</h1>
+          <p class="text-muted mb-4">Selecione o tipo de usuário para continuar:</p>
+          
+          <div class="d-grid gap-3 mb-4">
+            <button class="btn btn-google-green btn-lg" (click)="selectUserType('patient')">
+              <i class="bi bi-person me-2"></i>Sou Paciente
+            </button>
+            <button class="btn btn-google-blue btn-lg" (click)="showLoginForm()">
+              <i class="bi bi-person-badge me-2"></i>Sou Psicólogo
+            </button>
+          </div>
+          
+          <div *ngIf="showLogin" class="mt-4">
+            <div class="card bg-light">
+              <div class="card-body">
+                <h5 class="card-title google-red">
+                  <i class="bi bi-shield-lock me-2"></i>Acesso Restrito
+                </h5>
+                <div *ngIf="loginError" class="alert alert-danger" role="alert">
+                  <i class="bi bi-exclamation-triangle me-2"></i>{{ loginError }}
+                </div>
+                <form (ngSubmit)="onLogin()" #loginForm="ngForm">
+                  <div class="mb-3">
+                    <input type="text" 
+                           class="form-control form-control-google" 
+                           [(ngModel)]="credentials.usuario" 
+                           name="username" 
+                           placeholder="Usuário" 
+                           required>
+                  </div>
+                  <div class="mb-3">
+                    <input type="password" 
+                           class="form-control form-control-google" 
+                           [(ngModel)]="credentials.senha" 
+                           name="password" 
+                           placeholder="Senha" 
+                           required>
+                  </div>
+                  <button type="submit" 
+                          class="btn btn-google-blue w-100" 
+                          [disabled]="!loginForm.valid">
+                    <i class="bi bi-box-arrow-in-right me-2"></i>Entrar
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

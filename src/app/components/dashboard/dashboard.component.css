@@ -1,0 +1,10 @@
+/* Estilos customizados para o dashboard */
+.btn:hover {
+  transform: translateY(-1px);
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transition: box-shadow 0.3s ease;
+}
