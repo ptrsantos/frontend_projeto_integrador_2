@@ -10,7 +10,7 @@ API REST desenvolvida em Python/Flask para o sistema de gerenciamento da Clínic
 - **Prontuários**: Gerenciamento de prontuários eletrônicos
 - **Profissionais**: Gestão de usuários do sistema
 
-## Instalação
+## Instalação.
 
 1. Instalar dependências:
 ```bash
