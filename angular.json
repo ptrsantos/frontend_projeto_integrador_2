@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "amazon_q_frontend": {
+    "frontend_projeto_integrador_2": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/amazon_q_frontend",
+            "outputPath": "dist/frontend_projeto_integrador_2",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "amazon_q_frontend:build:production"
+              "browserTarget": "frontend_projeto_integrador_2:build:production"
             },
             "development": {
-              "browserTarget": "amazon_q_frontend:build:development"
+              "browserTarget": "frontend_projeto_integrador_2:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "amazon_q_frontend:build"
+            "browserTarget": "frontend_projeto_integrador_2:build"
           }
         },
         "test": {
